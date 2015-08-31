@@ -4,6 +4,7 @@ This is a Yeoman Generator for scaffolding an XSplit plugin using the [XSplit JS
 
 ### Installation
 ```shell
+npm install -g bower
 npm install -g yo
 npm install -g generator-xjs
 ```
