@@ -1,0 +1,21 @@
+{
+  "name": "generator-xjs",
+  "version": "0.0.1",
+  "description": "Yeoman generator for XSplit JS Framework",
+  "repository": "git://github.com/xjsframework/generator-xjs.git",
+  "files": [
+    "app",
+    "js"
+  ],
+  "keywords": [
+    "yeoman-generator",
+    "xsplit",
+    "xjs",
+    "js",
+    "framework"
+  ],
+  "dependencies": {
+    "underscore.string": "^3.1.1",
+    "yeoman-generator": "^0.20.1"
+  }
+}
