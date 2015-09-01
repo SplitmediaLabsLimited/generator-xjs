@@ -70,7 +70,7 @@ module.exports = generators.Base.extend({
       { name: this.propername, version: this.appversion }
     );
 
-    if (this.apptype === 'global-script') {
+    if (this.apptype === 'extension') {
       this.fs.delete(
         this.destinationPath('index_config.html')
       );

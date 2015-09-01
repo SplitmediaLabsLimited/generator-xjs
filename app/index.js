@@ -18,7 +18,7 @@ module.exports = generators.Base.extend({
       type     : 'list',
       name     : 'apptype',
       message  : 'Plugin type',
-      choices  : ['Source', 'Global Script'],
+      choices  : ['Source', 'Extension'],
       filter   : function(value) {
         return value.toLowerCase().replace(/ /ig, '-');
       }
@@ -67,7 +67,7 @@ module.exports = generators.Base.extend({
       { name: this.propername, version: this.appversion }
     );
 
-    if (this.apptype === 'global-script') {
+    if (this.apptype === 'extension') {
       this.fs.delete(
         this.destinationPath('index_config.html')
       );

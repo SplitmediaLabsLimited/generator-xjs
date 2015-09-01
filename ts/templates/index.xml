@@ -13,7 +13,7 @@
   <param name="flashvars" value="" />
   <ProperName><%= propname %></ProperName>
   <Category><%= packagename %></Category>
-  <ShowConfigOnAdd>true</ShowConfigOnAdd>
+  <ShowConfigOnAdd>false</ShowConfigOnAdd>
   <MinCompatibleVersion>2.3.1505.0516</MinCompatibleVersion>
   <MinFxVersion>2.3.1505.0516</MinFxVersion>
   <Version><%= version %></Version>
