@@ -66,13 +66,21 @@ module.exports = generators.Base.extend({
       this.destinationPath('bower.json'),
       { name: this.propername, version: this.appversion }
     );
+    
+    this.fs.copyTpl(
+      this.templatePath('index.xml'),
+      this.destinationPath('index.xml'),
+      {
+          name        : this.appname,
+          propname    : this.propername,
+          version     : this.appversion,
+          packagename : this.packagename
+      }
+    );
 
     if (this.apptype === 'extension') {
       this.fs.delete(
         this.destinationPath('index_config.html')
-      );
-      this.fs.delete(
-        this.destinationPath('index.xml')
       );
     }
     else {
@@ -80,16 +88,6 @@ module.exports = generators.Base.extend({
         this.templatePath('index_config.html'),
         this.destinationPath('index_config.html'),
         { title: this.appname }
-      );
-      this.fs.copyTpl(
-        this.templatePath('index.xml'),
-        this.destinationPath('index.xml'),
-        {
-            name        : this.appname,
-            propname    : this.propername,
-            version     : this.appversion,
-            packagename : this.packagename
-        }
       );
     }
   },
