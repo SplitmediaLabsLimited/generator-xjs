@@ -1,5 +1,3 @@
-/* globals xui */
-
 (function() {
   'use strict';
 
