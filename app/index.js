@@ -66,12 +66,13 @@ module.exports = generators.Base.extend({
       this.destinationPath('bower.json'),
       { name: this.propername, version: this.appversion }
     );
-    
+
     this.fs.copyTpl(
       this.templatePath('index.xml'),
       this.destinationPath('index.xml'),
       {
           name        : this.appname,
+          apptype     : this.apptype,
           propname    : this.propername,
           version     : this.appversion,
           packagename : this.packagename
