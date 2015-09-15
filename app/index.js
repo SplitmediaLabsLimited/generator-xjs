@@ -36,7 +36,7 @@ module.exports = generators.Base.extend({
       Object.keys(answers).forEach(function(key) {
         this[key] = answers[key];
       }.bind(this));
-      this.propername = this.appname.toLowerCase().replace(/ /ig, '-');
+      this.name = this.appname.toLowerCase().replace(/ /ig, '-');
       done();
     }.bind(this));
   },
@@ -58,22 +58,22 @@ module.exports = generators.Base.extend({
     this.fs.copyTpl(
       this.templatePath('package.json'),
       this.destinationPath('package.json'),
-      { name: this.propername, version: this.appversion }
+      { name: this.name, version: this.appversion }
     );
 
     this.fs.copyTpl(
       this.templatePath('bower.json'),
       this.destinationPath('bower.json'),
-      { name: this.propername, version: this.appversion }
+      { name: this.name, version: this.appversion }
     );
 
     this.fs.copyTpl(
       this.templatePath('index.xml'),
       this.destinationPath('index.xml'),
       {
-          name        : this.appname,
+          name        : this.name,
           apptype     : this.apptype,
-          propname    : this.propername,
+          propname    : this.appname,
           version     : this.appversion,
           packagename : this.packagename
       }
