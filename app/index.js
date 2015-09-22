@@ -98,6 +98,10 @@ module.exports = generators.Base.extend({
       'gulp',
       'browser-sync'
     ]);
+    this.npmInstall([
+      'bower',
+      'gulp'
+    ], { 'global' : true });
     this.bowerInstall('xjs-framework');
   },
 
