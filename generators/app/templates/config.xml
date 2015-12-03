@@ -7,14 +7,17 @@
   <CanStepBackward>false</CanStepBackward>
   <CanStepForward>false</CanStepForward>
   <CanStop>false</CanStop>
+  <CanCustomizeCSS>false</CanCustomizeCSS>
+  <CanSetResolution>false</CanSetResolution>
   <Description />
   <HelpLink />
   <HelpText />
   <param name="flashvars" value="" />
   <Category><%= packagename %></Category>
   <ShowConfigOnAdd>false</ShowConfigOnAdd>
-  <MinCompatibleVersion>2.3.1505.0516</MinCompatibleVersion>
-  <MinFxVersion>2.3.1505.0516</MinFxVersion>
+  <UseEmbeddedConfig>false</UseEmbeddedConfig>
+  <MinCompatibleVersion>2.6.1509.2104</MinCompatibleVersion>
+  <MinFxVersion>2.6.1509.2104</MinFxVersion>
   <Version><%= version %></Version>
   <% } %>
   <Name><%= name %></Name>
