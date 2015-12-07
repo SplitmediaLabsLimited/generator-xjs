@@ -1,4 +1,4 @@
-# Generator-XUI
+# Generator-XJS
 
 This is a Yeoman Generator for scaffolding an XSplit plugin using the [XSplit JS Framework](https://github.com/xjsframework/xjs).
 
@@ -15,4 +15,12 @@ mkdir YOUR_DIR
 cd YOUR_DIR
 yo xjs
 gulp
+```
+
+### Scaffold XJS Project with Webpack
+```shell
+mkdir YOUR_DIR
+cd YOUR_DIR
+yo xjs:webpack
+webpack --watch
 ```

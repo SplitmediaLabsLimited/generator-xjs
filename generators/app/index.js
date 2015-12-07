@@ -68,8 +68,8 @@ module.exports = generators.Base.extend({
     );
 
     this.fs.copyTpl(
-      this.templatePath('index.xml'),
-      this.destinationPath('index.xml'),
+      this.templatePath('config.xml'),
+      this.destinationPath('config.xml'),
       {
           name        : this.name,
           apptype     : this.apptype,
