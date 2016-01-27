@@ -1,4 +1,11 @@
 /* globals module */
+var webpack = require('webpack');
+var fs = require('fs');
+
+function fetchLicense() {
+  var filename = require.resolve('./node_modules/xjs-framework/LICENSE');
+  return fs.readFileSync(filename, 'utf8'); // Sync... we need sync.
+}
 
 module.exports = {
   entry: {
@@ -38,5 +45,9 @@ module.exports = {
     define: {
       url: require('stylus').url({ limit: false })
     }
-  }
+  },
+
+  plugins: [
+    new webpack.BannerPlugin(fetchLicense())
+  ]
 };
