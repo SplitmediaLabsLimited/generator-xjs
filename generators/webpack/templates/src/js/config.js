@@ -28,3 +28,24 @@ ready().then(() => {
     tabOrder: ['Custom', 'Color', 'Layout', 'Transition']
   });
 });
+
+// Disable backspace event to prevent breaking your source prop window
+document.onkeydown = event => {
+  if (
+    event.target.nodeName !== 'INPUT' &&
+    event.target.nodeName !== 'TEXTAREA' &&
+    event.keyCode === 8
+  ) {
+    return false;
+  }
+}
+
+// Disable context menu
+document.oncontextmenu = () => { return false; };
+
+// Functions that are executed by XBC. We need to handle these to prevent 
+// unwanted error messages
+window.OnDialogLoadStart = () => {};
+window.OnDialogTitleChange = () => {};
+window.OnDialogBeforeNavigation = () => {};
+window.SetVolume = () => {};
