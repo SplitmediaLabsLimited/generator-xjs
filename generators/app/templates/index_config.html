@@ -13,7 +13,7 @@
         var xjs = require('xjs');
 
         xjs.ready().then(function() {
-          xjs.SourceConfigWindow.getInstance().useTabbedWindow({
+          xjs.SourcePropsWindow.getInstance().useTabbedWindow({
             customTabs: ['Custom'],
             tabOrder: ['Custom', 'Color', 'Layout', 'Transition']
           });
@@ -39,6 +39,7 @@
         window.OnDialogTitleChange = function() {};
         window.OnDialogBeforeNavigation = function() {};
         window.SetVolume = function() {};
+        window.GetPlayState = function() {};
       })();
     </script>
   </body>

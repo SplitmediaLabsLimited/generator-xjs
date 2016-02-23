@@ -15,13 +15,13 @@
  * http://xjsframework.github.io/api.html
  */
 
-import { ready, SourceConfigWindow } from 'xjs-framework';
+import { ready, SourcePropsWindow  } from 'xjs-framework';
 
 // Include our stylus file
 require('../stylus/config.styl');
 
 ready().then(() => {
-  const configWindow = SourceConfigWindow.getInstance();
+  const configWindow = SourcePropsWindow .getInstance();
 
   configWindow.useTabbedWindow({
     customTabs: ['Custom'],
@@ -49,3 +49,4 @@ window.OnDialogLoadStart = () => {};
 window.OnDialogTitleChange = () => {};
 window.OnDialogBeforeNavigation = () => {};
 window.SetVolume = () => {};
+window.GetPlayState = function() {};
